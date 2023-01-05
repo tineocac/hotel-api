@@ -19,10 +19,6 @@ const Bookings = db.define("bookings", {
   depart: {
     type: DataTypes.DATE,
   },
-  guestData: {
-    type: DataTypes.INTEGER,
-    field: "guest_data",
-  },
   numberOfPersons: {
     type: DataTypes.INTEGER,
     field: "number_of_persons",
@@ -34,11 +30,6 @@ const Bookings = db.define("bookings", {
   payment: {
     type: DataTypes.ENUM("unselected", "cash", "TDC", "TDD", "tranfer"),
     defaultValue: "unselected",
-  },
-  roomId: {
-    type: DataTypes.INTEGER,
-    field: "roomId",
-    allowNull: false,
   },
 });
 
