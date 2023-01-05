@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const db = require("./utils/database");
+const errorHandle = require("./middlewares/error.middleware");
 
 const app = express();
 
@@ -21,4 +22,6 @@ app.get("/", (req, res) => {
   console.log("Welcome to server");
 });
 
-module.exprots = app;
+app.use(errorHandle);
+
+module.exports = app;
