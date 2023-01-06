@@ -10,6 +10,7 @@ const {
   bookingsRoutes,
   guestsRoutes,
   paysRoutes,
+  roomsRoutes,
 } = require("./routes");
 
 const app = express();
@@ -32,6 +33,7 @@ app.use("/api/v1", authRoutes);
 app.use("/api/v1", bookingsRoutes);
 app.use("/api/v1", guestsRoutes);
 app.use("/api/v1", paysRoutes);
+app.use("/api/v1", roomsRoutes);
 
 app.use(errorMiddleware);
 

@@ -3,6 +3,7 @@ const { userLogin } = require("./auth.controllers");
 const { createBooking } = require("./bookings.controllers");
 const { createGuest } = require("./guests.controllers");
 const { makePayment } = require("./pay.controllers");
+const { selectRoom} = require('./rooms.controllers')
 
 module.exports = {
   createUser,
@@ -10,4 +11,5 @@ module.exports = {
   createBooking,
   createGuest,
   makePayment,
+  selectRoom
 };

@@ -3,6 +3,7 @@ const authRoutes = require("./auth.routes");
 const bookingsRoutes = require("./bookings.routes");
 const guestsRoutes = require("./guests.routes");
 const paysRoutes = require("./pay.routes");
+const roomsRoutes = require("./rooms.routes");
 
 module.exports = {
   usersRoutes,
@@ -10,4 +11,5 @@ module.exports = {
   bookingsRoutes,
   guestsRoutes,
   paysRoutes,
+  roomsRoutes,
 };
