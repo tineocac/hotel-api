@@ -1,4 +1,4 @@
-const errorHandle = (error, req, res, next) => {
+const errorMiddleware = (error, req, res, next) => {
   const { status, errorContent, message } = error;
   res.status(status).json({
     message,
@@ -6,4 +6,4 @@ const errorHandle = (error, req, res, next) => {
   });
 };
 
-module.exports = errorHandle;
+module.exports = errorMiddleware;
