@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  api_hotel:
+    build: .
+    ports:
+      - "8000:8000"
+    links:
+      - postgres_api_hotel
+    environment:
+      - PORT=8000
+      - DB_HOST=postgres_api_hotel
+      - DB_USER=postgres
+      - DB_PASSWORD=root
+      - DB_PORT=5432
+      - DB=postgres
+    container_name: hotel_api
+  postgres_api_hotel:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    container_name: postgres_api_hotel
