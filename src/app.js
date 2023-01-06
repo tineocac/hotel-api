@@ -4,7 +4,7 @@ const cors = require("cors");
 const db = require("./utils/database");
 const errorMiddleware = require("./middlewares/error.middleware");
 const initModels = require("./models/initModels");
-const { usersRoutes, authRoutes } = require("./routes");
+const { usersRoutes, authRoutes, bookingsRoutes } = require("./routes");
 
 const app = express();
 
@@ -23,6 +23,7 @@ db.sync({ force: false })
 
 app.use("/api/v1", usersRoutes);
 app.use("/api/v1", authRoutes);
+app.use("/api/v1", bookingsRoutes);
 
 app.use(errorMiddleware);
 
