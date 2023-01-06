@@ -10,6 +10,9 @@ const Rooms = db.define(
       autoIncrement: true,
       allowNull: false,
     },
+    type: {
+      type: DataTypes.STRING,
+    },
     number: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -23,7 +26,7 @@ const Rooms = db.define(
       allowNull: false,
     },
     price: {
-      tpye: DataTypes.FLOAT,
+      type: DataTypes.FLOAT,
       allowNull: false,
     },
   },

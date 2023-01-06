@@ -11,7 +11,7 @@ const Pay = db.define(
       allowNull: false,
     },
     bookingsId: {
-      tpye: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
     },
     status: {
       type: DataTypes.ENUM("pending", "paid", "canceled"),

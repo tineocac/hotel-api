@@ -16,7 +16,7 @@ const Guests = db.define(
       allowNull: false,
     },
     idCard: {
-      tpye: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       field: "id_card"
     },
