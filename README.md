@@ -1,5 +1,10 @@
 # hotel-api
 
+First step: 
+run the next command:
+
+### docker-compose up
+
 # Links:
 ## -Documentation (Postman): ====> https://documenter.getpostman.com/view/23630276/2s8Z73zX8c
 ## -Deploy (Railway): ====> https://hotel-api-production-f0ab.up.railway.app/
