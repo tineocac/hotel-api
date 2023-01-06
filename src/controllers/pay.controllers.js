@@ -3,8 +3,8 @@ const { PayServices } = require("../services");
 const makePayment = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const payment = req.body
-    const result = await PayServices.pay( id, payment );
+    const { status, payment } = req.body;
+    const result = await PayServices.pay(id, status, payment);
     res.status(200).json({
       message: "You payment has been completed succesfull",
     });
