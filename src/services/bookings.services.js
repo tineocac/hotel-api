@@ -5,7 +5,7 @@ class BookingsServices {
     try {
       const result = await Bookings.create(newBooking);
       const bookingId = result.id;
-      const pay = await Pay.create({ bookingId });
+      const pay = await Pay.create({ bookingsId: bookingId });
       return result;
     } catch (error) {
       throw error;

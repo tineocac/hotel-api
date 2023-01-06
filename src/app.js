@@ -4,7 +4,13 @@ const cors = require("cors");
 const db = require("./utils/database");
 const errorMiddleware = require("./middlewares/error.middleware");
 const initModels = require("./models/initModels");
-const { usersRoutes, authRoutes, bookingsRoutes } = require("./routes");
+const {
+  usersRoutes,
+  authRoutes,
+  bookingsRoutes,
+  guestsRoutes,
+  paysRoutes,
+} = require("./routes");
 
 const app = express();
 
@@ -24,6 +30,8 @@ db.sync({ force: false })
 app.use("/api/v1", usersRoutes);
 app.use("/api/v1", authRoutes);
 app.use("/api/v1", bookingsRoutes);
+app.use("/api/v1", guestsRoutes);
+app.use("/api/v1", paysRoutes);
 
 app.use(errorMiddleware);
 

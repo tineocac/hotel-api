@@ -12,10 +12,15 @@ const Pay = db.define(
     },
     bookingsId: {
       type: DataTypes.INTEGER,
+      field: "bookings_id",
     },
     status: {
       type: DataTypes.ENUM("pending", "paid", "canceled"),
       defaultValue: "pending",
+    },
+    payment: {
+      type: DataTypes.ENUM("unselected", "cash", "TDC", "TDD", "tranfer"),
+      defaultValue: "unselected",
     },
     total: {
       type: DataTypes.FLOAT,

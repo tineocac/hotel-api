@@ -27,10 +27,6 @@ const Bookings = db.define("bookings", {
     type: DataTypes.ENUM("pending", "paid", "canceled"),
     defaultValue: "pending",
   },
-  payment: {
-    type: DataTypes.ENUM("unselected", "cash", "TDC", "TDD", "tranfer"),
-    defaultValue: "unselected",
-  },
 });
 
 module.exports = Bookings;
