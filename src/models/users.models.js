@@ -26,7 +26,7 @@ const Users = db.define(
       unique: true,
       allowNull: false,
     },
-    addres: {
+    address: {
       type: DataTypes.STRING,
     },
     email: {
