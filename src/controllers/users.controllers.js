@@ -10,8 +10,8 @@ const createUser = async (req, res, next) => {
     await transporter.sendMail({
       from: "<carlostineocac@gmail.com>",
       to: result.email,
-      subject: `Welcome ${result.username} to the best HOTEL API`,
-      html: welcomeTemplate(`${result.username}`),
+      subject: `Welcome ${result.firstName } ${result.lastName}  to the best HOTEL API`,
+      html: welcomeTemplate(`${result.firstName}`),
     });
   } catch (error) {
     next({

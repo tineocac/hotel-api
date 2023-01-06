@@ -15,4 +15,18 @@ const selectRoom = async (req, res, next) => {
   }
 };
 
-module.exports = { selectRoom };
+const createRoom = async (req, res, next) => {
+  try {
+    const newRoom = req.body;
+    const result = await RoomsServices.create(newRoom);
+    res.status(201).json({ message: "Room has been created succesfull" });
+  } catch (error) {
+    next({
+      status: 400,
+      errorContent: error,
+      message: "Oops, something went wrong",
+    });
+  }
+};
+
+module.exports = { selectRoom, createRoom };

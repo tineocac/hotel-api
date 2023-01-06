@@ -10,7 +10,6 @@ const BookingsRooms = db.define('bookings_rooms', {
     },
     bookingsId:{
         type: DataTypes.INTEGER,
-        allowNull: false,
         field: "bookings_id"
     },
     roomsId:{

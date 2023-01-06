@@ -42,7 +42,7 @@ const welcomeTemplate = (username) =>
                      <table role="presentation" style="width:100%;border-collapse:collapse;border-spacing:0;">
                        <tr>
                          <td style="padding:0;width:50%;" align="left">
-                           <h4>ChatApp</h4>
+                           <h4>HOTELAPI</h4>
                          </td>
                          <td style="padding: 0; width: 50%" align="right">
                            <a
@@ -92,7 +92,7 @@ const welcomeTemplate = (username) =>
                          <td>
                            <p
                              style="font-weight:400;font-size: 16px;line-height: 150%;letter-spacing: 0.2px;color: #333333;">
-                             Gracias por registrarte a HOTEL API para vivir la mejor experiencia de conseguir los mejores precios del en reservas de hoteles.
+                             Gracias por registrarte a HOTEL API para vivir la mejor experiencia de conseguir los mejores precios en reservas de habitaciones de los mejores hoteles del pais.
                              Te invitamos a que realices tu primera reserva y disfrutes de esta plataforma.
                              Esperemos que sea de tu agrado.
                            </p>
