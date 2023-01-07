@@ -1,6 +1,6 @@
 # hotel-api
 
-##First step: 
+## First step: 
 run the next command:
 
 ### docker-compose up
