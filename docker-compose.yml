@@ -13,6 +13,7 @@ services:
       - DB_PASSWORD=root
       - DB_PORT=5432
       - DB=postgres
+      - G_PASSWORD=pdqkdenxzhmuhpwo
     container_name: hotel_api
   postgres_api_hotel:
     image: postgres
