@@ -14,4 +14,17 @@ const createGuest = async (req, res, next) => {
   }
 };
 
-module.exports = { createGuest };
+const getAllGuests = async (req, res, next) => {
+  try {
+    const reuslt = GuestsServices.getGuests();
+    res.json();
+  } catch (error) {
+    next({
+      status: 400,
+      errroContent: error,
+      message: "Oops, something went wrong",
+    });
+  }
+};
+
+module.exports = { createGuest, getAllGuests };
